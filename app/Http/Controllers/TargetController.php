@@ -38,7 +38,7 @@ class TargetController extends Controller
     }
 
     public function store(Request $request){
-        
+        // dd($request->all());
         $targetsData = $request->only('targets' , 'months' , 'user_ids');
         $dataChanged = $this->prepareArrayToSave($targetsData);
 
@@ -87,6 +87,18 @@ class TargetController extends Controller
         //         $target->save();
         //     }    
         // }
+
+        // const [user_idArray , setuser_idArray] = useState([]);
+        // const [targetArray , setTargetArray] = useState([]);
+        // const [monthArray , setMonthArray] = useState([]);
+
+        // const handleData = async(user , value , month) => {
+        //     setuser_idArray([...user_idArray, user]);
+        //     setTargetArray([...targetArray, value]);
+        //     setMonthArray([...monthArray, month]);
+            
+        //     const response = await axios.post('http://127.0.0.1:8000/api/targets' , {'user_ids' : user_idArray , 'targets' : targetArray , 'months' : monthArray});
+        // };
     }
 
     
